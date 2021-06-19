@@ -7,6 +7,7 @@ import java.net.Socket;
 public class SocketClientTest {
     public static void main(String[] args) {
         SocketClientTest test = new SocketClientTest();
+        test.sendSocket();
     }
 
     public void sendSocket() {
