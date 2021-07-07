@@ -7,4 +7,14 @@
         <!-- 세션 유효기간 설정 -->
         <session-timeout>50</session-timeout>
     </session-config>
+
+    <servlet>
+        <servlet-name>new</servlet-name>
+        <servlet-class>com.flab.d0_server.NewServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>new</servlet-name>
+        <url-pattern>/new</url-pattern>
+    </servlet-mapping>
 </web-app>
