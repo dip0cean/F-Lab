@@ -10,11 +10,11 @@
 
     <servlet>
         <servlet-name>new</servlet-name>
-        <servlet-class>com.flab.d0_server.NewServlet</servlet-class>
+        <servlet-class>com.flab.d0_server.test.NewServlet</servlet-class>
     </servlet>
     
     <servlet-mapping>
         <servlet-name>new</servlet-name>
-        <url-pattern>/new</url-pattern>
+        <url-pattern>/test/new</url-pattern>
     </servlet-mapping>
 </web-app>

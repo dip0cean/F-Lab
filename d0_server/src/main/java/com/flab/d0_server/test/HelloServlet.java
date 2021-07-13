@@ -1,11 +1,11 @@
-package com.flab.d0_server;
+package com.flab.d0_server.test;
 
 import java.io.*;
 import java.util.List;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
-@WebServlet(name = "helloServlet", value = "/hello-servlet")
+@WebServlet(name = "helloServlet", value = "/test/hello-servlet")
 public class HelloServlet extends HttpServlet {
     private String message;
 

@@ -1,4 +1,4 @@
-package com.flab.d0_server;
+package com.flab.d0_server.test;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
