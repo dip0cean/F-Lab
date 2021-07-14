@@ -10,7 +10,7 @@ public class 조이스틱 {
 //        String name     = "AAABBAAAAAAAAAA";
 //        String name = "JEROEN";
 //        String name = "JAN";
-        String name = "BBAABAAAAB";
+        String name = "BBBBAAABA";
 
         // case_1 > 실패
         System.out.println("case 1 : " + joystick.case_1(name));
@@ -222,18 +222,18 @@ public class 조이스틱 {
             }
         }
 
-        int half     = (length / 2) - 1;
+        int half     = length / 2;
         int backStep = endIndex + 1 == length ? endIndex - maxCount : ((startIndex - 1) * 2) + length - (endIndex + 1);
         System.out.println("maxCount : " + maxCount + " / half : " + half + " / startIndex : " + startIndex + " / endIndex : " + endIndex + " / move : " + move + " / backStep : " + backStep + " / answer : " + answer);
         if (endIndex > 0) {
-            if (startIndex < half) {
+            if (startIndex <= half) {
                 if (startIndex == 0) {
                     move = move - endIndex;
                 } else {
                     move = Math.min(move, backStep);
                 }
             } else {
-                move = backStep;
+                move = Math.min(backStep - (move - endIndex), move);
             }
         }
         if (backStep < 0) {
