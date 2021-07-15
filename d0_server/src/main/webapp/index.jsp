@@ -18,6 +18,14 @@
             <li><a href="v1/front-controller/member/list">List</a></li>
         </ul>
     </li>
+    <li>
+        V2
+        <ul>
+            <li><a href="v2/front-controller/member/form">Form</a></li>
+            <li><a href="v2/front-controller/member/save">Save</a></li>
+            <li><a href="v2/front-controller/member/list">List</a></li>
+        </ul>
+    </li>
 </ul>
 </body>
 </html>
