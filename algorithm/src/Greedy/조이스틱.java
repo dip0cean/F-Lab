@@ -7,10 +7,10 @@ public class 조이스틱 {
     public static void main(String[] args) {
         조이스틱 joystick = new 조이스틱();
 //        String name     = "ABBAAAABBABB";
-//        String name     = "AAABBAAAAAAAAAA";
+        String name     = "AAABBAAAAAAAAAA";
 //        String name = "JEROEN";
 //        String name = "JAN";
-        String name = "BBBBAAABA";
+//        String name = "BBBBAAABA";
 
         // case_1 > 실패
         System.out.println("case 1 : " + joystick.case_1(name));
@@ -240,6 +240,9 @@ public class 조이스틱 {
             answer = 0;
             move = 0;
         }
+
+//        1. 모든 경우의 수에 대한 결과 맞았으면 좋겠고
+//        2. 최대 연속된 A 배열의 시작 인덱스와 끝인덱스를 이용해서 풀었으면 좋겠고
 
         return answer + move;
     }
