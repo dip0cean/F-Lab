@@ -1,8 +1,7 @@
 package Sort;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -20,7 +19,7 @@ public class K번째수 {
 
     public Integer[] solution(int[] arr, int[][] commands) {
         Integer[] result = new Integer[commands.length];
-        final int[] index = {0};
+        AtomicInteger index = new AtomicInteger(0);
         Arrays.stream(commands)
                 .forEach(command -> {
                     int value = IntStream
@@ -29,8 +28,7 @@ public class K번째수 {
                             .mapToObj(i -> arr[i])
                             .sorted()
                             .collect(Collectors.toList()).get(command[2] - 1);
-                    result[index[0]] = value;
-                    index[0]++;
+                    result[index.getAndSet(index.get() + 1)] = value;
                 });
         return result;
     }
