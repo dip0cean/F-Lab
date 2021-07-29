@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="pencilService" class="com.d0.spring_core.service.PencilService">
+        <!-- 의존성 주입 -->
+        <property name="pencilRepository" ref="pencilRepository"/>
+    </bean>
+    <bean id="pencilRepository" class="com.d0.spring_core.repository.PencilRepository"/>
+</beans>
